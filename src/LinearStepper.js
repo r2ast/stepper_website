@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import {
   Typography,
   Stepper,
@@ -115,12 +116,12 @@ const useStyles = makeStyles((theme) => {
       ...tickPositionStyles("top-right"),
     },
     heading: {
-      fontSize: "24px", // You can adjust the size
+      fontSize: "24px", // can adjust the size
       fontWeight: "bold",
       marginBottom: theme.spacing(2),
     },
     subHeading: {
-      fontSize: "18px", // You can adjust the size
+      fontSize: "18px", //  can adjust the size
       marginBottom: theme.spacing(2),
     },
   };
@@ -130,12 +131,11 @@ function getSteps() {
   return Object.keys(jsonData);
 }
 
-const LinearStepper = () => {
+const LinearStepper = ( {percentageValue, setPercentageValue }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [percentageValue, setPercentageValue] = useState(0);
   const steps = getSteps();
 
   const calculatePercentage = (step) => {
@@ -184,8 +184,6 @@ const LinearStepper = () => {
 
   return (
     <div>
-      <Typography variant="h5">Percentage: {Math.round(percentageValue)}%</Typography>
-      <hr />
       <Stepper alternativeLabel activeStep={activeStep} variant="progress">
         {steps.map((step, index) => {
           const stepData = jsonData[step];
@@ -295,6 +293,11 @@ const LinearStepper = () => {
       )}
     </div>
   );
+};
+
+LinearStepper.propTypes = {
+  percentageValue: PropTypes.number.isRequired,
+  setPercentageValue: PropTypes.func.isRequired,
 };
 
 export default LinearStepper;

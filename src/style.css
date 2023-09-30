@@ -1,0 +1,70 @@
+Grid {
+    display: block;
+    box-sizing: border-box;
+}
+/* Add CSS transitions to the paper class for smooth transitions */
+.paper {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Define a CSS class to apply animation when the step changes */
+  .step-transition {
+    animation: stepChange 0.3s ease-in-out;
+  }
+  
+  @keyframes stepChange {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .btn-previous {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 84px;
+    padding: 12px 40px 13px;
+    margin-top: 2px;
+    margin-right: 0.8rem;
+    min-width: 202px;
+    color: #fff!important;
+    font-weight: 700;
+    font-size: 13.5px;
+    line-height: 1.6em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(0,0,0,.08);
+    box-shadow: 0 11px 20px rgba(40,18,197,.17);
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+  
+.keyright {
+    position: relative;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    margin-top: 3px;
+    margin-right: 6px;
+    background: #f7f7f7;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    box-shadow: inset 0 -4px 0 #dfdfdf;
+    border-radius: 3px;
+    opacity: .62;
+    transition: all .2s ease;
+}
+
+.MuiStepper-root {
+    display: none !important;
+}

@@ -1,0 +1,93 @@
+{
+    "Step No 1": [
+      {
+        "id": 0,
+        "label": "Mobile",
+        "imageUrl": "type-iphone.svg"
+      },
+      {
+        "id": 1,
+        "label": "Web",
+        "imageUrl": "type-desktop.svg"
+      },
+      {
+        "id": 2,
+        "label": "Mobile & Web",
+        "imageUrl": ["type-iphone.svg", "type-desktop.svg"]
+      }
+    ],
+    "Step No 2": [
+      {
+        "id": 3,
+        "label": "Apple IOS",
+        "imageUrl": "type-iphone.svg"
+      },
+      {
+        "id": 4,
+        "label": "Google Android",
+        "imageUrl": "type-android.svg"
+      },
+      {
+        "id": 5,
+        "label": "Both platforms",
+        "imageUrl": ["type-iphone.svg", "type-android.svg"]
+      }
+    ],
+    "Step No 3": [
+      {
+        "id": 6,
+        "label": "Uber for X"
+      },
+      {
+        "id": 7,
+        "label": "Airbnb for X"
+      },
+      {
+        "id": 8,
+        "label": "Tinder for X"
+      },
+      {
+        "id": 9,
+        "label": "Linkedln for X"
+      },
+      {
+        "id": 10,
+        "label": "Instagram for X"
+      },
+      {
+        "id": 11,
+        "label": "Crowdfunding for X"
+      },
+      {
+        "id": 12,
+        "label": "Marketplace for X"
+      },
+      {
+        "id": 13,
+        "label": "Something else"
+      }
+    ],
+    "Step No 4": [
+      {
+        "id": 14,
+        "label": "Email",
+        "imageUrl": "login-email.svg"
+      },
+      {
+        "id": 15,
+        "label": "Social",
+        "imageUrl": "login-social.svg"
+      },
+      {
+        "id": 16,
+        "label": "No Login",
+        "imageUrl": "login-none.svg"
+      },
+      {
+        "id": 17,
+        "label": "Not sure",
+        "imageUrl": "login-notsure.svg"
+      }
+    ]
+  }
+  

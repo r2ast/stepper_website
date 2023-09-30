@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => {
       display: "block",
       boxShadow: "0 2px 4px rgba(0,0,0,.13)",
     };
+    
 
     switch (position) {
       case "top-left":
@@ -123,6 +124,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: "18px", // You can adjust the size
       marginBottom: theme.spacing(2),
     },
+    
   };
 });
 
@@ -173,14 +175,15 @@ const LinearStepper = () => {
     <div>
       <Stepper alternativeLabel activeStep={activeStep} variant="progress">
         {steps.map((step, index) => {
+          const stepData = jsonData[step];
           return (
             <Step key={index}>
               <StepLabel>
                 <Typography variant="h1" className={classes.heading}>
-                  {jsonData[step].heading}
+                  {stepData.heading}
                 </Typography>
                 <Typography variant="h2" className={classes.subHeading}>
-                  {jsonData[step].subHeading}
+                  {stepData.subHeading}
                 </Typography>
               </StepLabel>
             </Step>

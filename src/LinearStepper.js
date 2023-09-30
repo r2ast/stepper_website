@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme) => {
       display: "block",
       boxShadow: "0 2px 4px rgba(0,0,0,.13)",
     };
-    
 
     switch (position) {
       case "top-left":
@@ -124,7 +123,6 @@ const useStyles = makeStyles((theme) => {
       fontSize: "18px", // You can adjust the size
       marginBottom: theme.spacing(2),
     },
-    
   };
 });
 
@@ -137,13 +135,23 @@ const LinearStepper = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [percentageValue, setPercentageValue] = useState(0);
   const steps = getSteps();
+
+  const calculatePercentage = (step) => {
+    const totalSteps = steps.length;
+    const stepPercentage = (100 / totalSteps) * (step + 1);
+    return stepPercentage;
+  };
 
   const handleNext = () => {
     setIsLoading(true);
     setTimeout(() => {
       setActiveStep(activeStep + 1);
       setIsLoading(false);
+      const stepPercentage = calculatePercentage(activeStep + 1);
+      setPercentageValue(stepPercentage);
+      console.log("Percentage Value:", Math.round(percentageValue));
     }, 1000);
   };
 
@@ -155,6 +163,9 @@ const LinearStepper = () => {
       setTimeout(() => {
         setActiveStep(activeStep - 1);
         setIsLoading(false);
+        const stepPercentage = calculatePercentage(activeStep - 1);
+        setPercentageValue(stepPercentage);
+        console.log("Percentage Value:", Math.round(percentageValue));
       }, 1000);
     }
   };
@@ -173,6 +184,8 @@ const LinearStepper = () => {
 
   return (
     <div>
+      <Typography variant="h5">Percentage: {Math.round(percentageValue)}%</Typography>
+      <hr />
       <Stepper alternativeLabel activeStep={activeStep} variant="progress">
         {steps.map((step, index) => {
           const stepData = jsonData[step];

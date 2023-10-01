@@ -15,7 +15,7 @@ function App() {
       <CssBaseline />
       <ProgressBar
         percent={percentageValue}
-        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+        filledBackground="linear-gradient(162deg,#3672f8,#b01eff)"
       />
       <Container component={Box} p={4}>
         <Paper component={Box} p={3}>

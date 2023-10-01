@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {
   Typography,
   Stepper,
@@ -116,13 +116,49 @@ const useStyles = makeStyles((theme) => {
       ...tickPositionStyles("top-right"),
     },
     heading: {
-      fontSize: "24px", // can adjust the size
+      fontSize: "24px", // can adjust the font size of heading
       fontWeight: "bold",
       marginBottom: theme.spacing(2),
     },
     subHeading: {
-      fontSize: "18px", //  can adjust the size
+      fontSize: "18px", //  can adjust the font size of subheading
       marginBottom: theme.spacing(2),
+    },
+    customStepper: {
+      "& .customStep": {
+        opacity: 0.5,
+        transform: "translateX(-50%)",
+        position: "relative",
+        top: "0",
+        left: "0",
+        right: "0",
+        bottom: "0",
+        width: "20px",
+        height: "20px",
+        borderRadius: "50%",
+        border: "2px solid #fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: "14px",
+        fontWeight: "bold",
+      },
+      "& .customStep.accomplished": {
+        opacity: 1,
+        backgroundColor: "#3672f8",
+        color: "#fff",
+      },
+      "& .customStep.t-current": {
+        width: "40px",
+        height: "40px",
+        transform: "scale(1.5)",
+        transition: "transform 0.25s",
+      },
+      "& .customStep.t-middle": {
+        opacity: 1,
+        transform: "translateX(0)",
+        transitionDelay: "0.25s",
+      },
     },
   };
 });
@@ -131,7 +167,7 @@ function getSteps() {
   return Object.keys(jsonData);
 }
 
-const LinearStepper = ( {percentageValue, setPercentageValue }) => {
+const LinearStepper = ({ percentageValue, setPercentageValue }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
@@ -142,6 +178,13 @@ const LinearStepper = ( {percentageValue, setPercentageValue }) => {
     const totalSteps = steps.length;
     const stepPercentage = (100 / totalSteps) * (step + 1);
     return stepPercentage;
+  };
+
+  const transitionStyles = {
+    entering: { transform: "scale(1.5)" },
+    entered: { transform: "scale(1)" },
+    exiting: { transform: "scale(1.5)" },
+    exited: { transform: "scale(1)" },
   };
 
   const handleNext = () => {
@@ -184,7 +227,12 @@ const LinearStepper = ( {percentageValue, setPercentageValue }) => {
 
   return (
     <div>
-      <Stepper alternativeLabel activeStep={activeStep} variant="progress">
+      <Stepper
+        alternativeLabel
+        activeStep={activeStep}
+        variant="progress"
+        className={`customStepper ${activeStep !== steps.length - 1 ? 't-current' : ''}`}
+      >
         {steps.map((step, index) => {
           const stepData = jsonData[step];
           return (
@@ -197,6 +245,17 @@ const LinearStepper = ( {percentageValue, setPercentageValue }) => {
                   {stepData.subHeading}
                 </Typography>
               </StepLabel>
+
+              {({ accomplished, transitionState, index }) => (
+                <div
+                  style={transitionStyles[transitionState]}
+                  className={`customStep ${accomplished ? "accomplished" : ""} ${
+                    index === activeStep ? "t-middle" : ""
+                  }`}
+                >
+                  {index}
+                </div>
+              )}
             </Step>
           );
         })}

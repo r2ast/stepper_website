@@ -14,7 +14,7 @@ import "./style.css";
 
 import jsonData from "./jsonNew.json";
 import CustomButton from "./ButtonComponent.js";
-// import useStyles from "./LinearStepperStyles"; 
+// import useStyles from "./LinearStepperStyles";
 
 const backArrowSVG = (
   <svg width="25" height="13" viewBox="0 0 14 13" fill="none">
@@ -62,6 +62,29 @@ const useStyles = makeStyles((theme) => {
       marginRight: theme.spacing(1),
       margin: theme.spacing(1),
     },
+    btnPrevious: {
+      position: "relative",
+    verticalAlign: "top",
+    background: "#1adf80",
+    borderRadius: "84px",
+    padding: "12px 40px 13px",
+    marginTop: "2px",
+    marginRight: "0.8rem",
+    minWidth: "202px",
+    color: "#fff",
+    fontWeight: "700",
+    fontSize: "13.5px",
+    lineHeight: "1.6em",
+    textAlign: "center",
+    textDecoration: "none",
+    textShadow: "0 0 6px rgba(0, 0, 0, 0.08)",
+    boxShadow: "0 11px 20px rgba(40, 18, 197, 0.17)",
+    boxSizing: "border-box",
+    border: "0",
+    cursor: "pointer",
+    overflow: "hidden",
+    },
+
     paper: {
       textAlign: "center",
       padding: theme.spacing(2),
@@ -161,15 +184,15 @@ const useStyles = makeStyles((theme) => {
         transitionDelay: "0.25s",
       },
     },
+    
   };
 });
 
 function getSteps() {
-  
   return Object.keys(jsonData);
 }
 
-const LinearStepper = ({  setPercentageValue }) => {
+const LinearStepper = ({ setPercentageValue }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
@@ -229,9 +252,19 @@ const LinearStepper = ({  setPercentageValue }) => {
   };
 
   const collectSelectedItems = (selectedItem) => {
-    setSelectedItemsArray([...selectedItemsArray, selectedItem]);
-    console.log('selectedItemsArray :', selectedItemsArray);
+    // Check if the item is already in the selectedItemsArray
+    const isSelected = selectedItemsArray.some((item) => item.label === selectedItem.label);
+  
+    if (isSelected) {
+      // If the item is already selected, remove it from the array
+      setSelectedItemsArray(selectedItemsArray.filter((item) => item.label !== selectedItem.label));
+    } else {
+      // If the item is not selected, add it to the array
+      setSelectedItemsArray([...selectedItemsArray, selectedItem]);
+    }
   };
+  
+  console.log('selectedItemsArray ::', selectedItemsArray);
 
   return (
     <div>
@@ -239,27 +272,33 @@ const LinearStepper = ({  setPercentageValue }) => {
         alternativeLabel
         activeStep={activeStep}
         variant="progress"
-        className={`customStepper ${activeStep !== steps.length - 1 ? 't-current' : ''}`}
+        className={`customStepper ${
+          activeStep !== steps.length - 1 ? "t-current" : ""
+        }`}
       >
         {steps.map((step, index) => {
           const stepData = jsonData[step];
           return (
             <Step key={index}>
               <StepLabel>
-                <Typography variant="h1" className={classes.heading}>
-                  {stepData.heading}
-                </Typography>
-                <Typography variant="h2" className={classes.subHeading}>
-                  {stepData.subHeading}
-                </Typography>
+                {stepData.heading && (
+                  <Typography variant="h1" className={classes.heading}>
+                    {stepData.heading}
+                  </Typography>
+                )}
+                {stepData.subHeading && (
+                  <Typography variant="h2" className={classes.subHeading}>
+                    {stepData.subHeading}
+                  </Typography>
+                )}
               </StepLabel>
 
               {({ accomplished, transitionState, index }) => (
                 <div
                   style={transitionStyles[transitionState]}
-                  className={`customStep ${accomplished ? "accomplished" : ""} ${
-                    index === activeStep ? "t-middle" : ""
-                  }`}
+                  className={`customStep ${
+                    accomplished ? "accomplished" : ""
+                  } ${index === activeStep ? "t-middle" : ""}`}
                 >
                   {index}
                 </div>
@@ -295,7 +334,7 @@ const LinearStepper = ({  setPercentageValue }) => {
                   }`}
                   onClick={() => {
                     handleBoxClick(item.label);
-                    collectSelectedItems(item); 
+                    collectSelectedItems(item);
                   }}
                 >
                   <div className={classes.tick}></div>

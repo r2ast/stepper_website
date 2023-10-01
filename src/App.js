@@ -8,7 +8,6 @@ function App() {
   const [percentageValue, setPercentageValue] = useState(0);
   const updatePercentageValue = (newValue) => {
     setPercentageValue(newValue);
-    console.log('Percentage Value in App.js:', Math.round(percentageValue));
   };
   return (
     <>

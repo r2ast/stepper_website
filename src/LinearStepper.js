@@ -14,6 +14,7 @@ import "./style.css";
 
 import jsonData from "./jsonNew.json";
 import CustomButton from "./ButtonComponent.js";
+// import useStyles from "./LinearStepperStyles"; 
 
 const backArrowSVG = (
   <svg width="25" height="13" viewBox="0 0 14 13" fill="none">
@@ -164,14 +165,16 @@ const useStyles = makeStyles((theme) => {
 });
 
 function getSteps() {
+  
   return Object.keys(jsonData);
 }
 
-const LinearStepper = ({ percentageValue, setPercentageValue }) => {
+const LinearStepper = ({  setPercentageValue }) => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedItemsArray, setSelectedItemsArray] = useState([]);
   const steps = getSteps();
 
   const calculatePercentage = (step) => {
@@ -194,7 +197,7 @@ const LinearStepper = ({ percentageValue, setPercentageValue }) => {
       setIsLoading(false);
       const stepPercentage = calculatePercentage(activeStep + 1);
       setPercentageValue(stepPercentage);
-      console.log("Percentage Value:", Math.round(percentageValue));
+      // console.log("Percentage Value:", Math.round(percentageValue));
     }, 1000);
   };
 
@@ -208,7 +211,7 @@ const LinearStepper = ({ percentageValue, setPercentageValue }) => {
         setIsLoading(false);
         const stepPercentage = calculatePercentage(activeStep - 1);
         setPercentageValue(stepPercentage);
-        console.log("Percentage Value:", Math.round(percentageValue));
+        // console.log("Percentage Value:", Math.round(percentageValue));
       }, 1000);
     }
   };
@@ -223,6 +226,11 @@ const LinearStepper = ({ percentageValue, setPercentageValue }) => {
     } else {
       setSelectedItems([...selectedItems, label]);
     }
+  };
+
+  const collectSelectedItems = (selectedItem) => {
+    setSelectedItemsArray([...selectedItemsArray, selectedItem]);
+    console.log('selectedItemsArray :', selectedItemsArray);
   };
 
   return (
@@ -285,7 +293,10 @@ const LinearStepper = ({ percentageValue, setPercentageValue }) => {
                       ? classes.stepTransition
                       : ""
                   }`}
-                  onClick={() => handleBoxClick(item.label)}
+                  onClick={() => {
+                    handleBoxClick(item.label);
+                    collectSelectedItems(item); 
+                  }}
                 >
                   <div className={classes.tick}></div>
                   <div className={classes.imageContainer}>

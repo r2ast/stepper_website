@@ -8,19 +8,22 @@
         "id": 0,
         "label": "Mobile",
         "imageUrl": "type-iphone.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 1,
         "label": "Web",
         "imageUrl": "type-desktop.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 2,
         "label": "Mobile & Web",
         "imageUrl": ["type-iphone.svg", "type-desktop.svg"],
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -33,19 +36,22 @@
         "id": 3,
         "label": "Apple IOS",
         "imageUrl": "type-iphone.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 4,
         "label": "Google Android",
         "imageUrl": "type-android.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 5,
         "label": "Both platforms",
         "imageUrl": ["type-iphone.svg", "type-android.svg"],
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -57,42 +63,50 @@
       {
         "id": 6,
         "label": "Uber for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 7,
         "label": "Airbnb for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 8,
         "label": "Tinder for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 9,
         "label": "LinkedIn for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 10,
         "label": "Instagram for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 11,
         "label": "Crowdfunding for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 12,
         "label": "Marketplace for X",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 13,
         "label": "Something else",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -105,25 +119,29 @@
         "id": 14,
         "label": "Email",
         "imageUrl": "login-email.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 15,
         "label": "Social",
         "imageUrl": "login-social.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 16,
         "label": "No Login",
         "imageUrl": "login-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
         "id": 17,
         "label": "Not sure",
         "imageUrl": "login-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -133,22 +151,25 @@
     "subHeading": "A profile is space where users can view one another's personal details that the user has made public. Often utilised when building online communities.",
     "options": [
       {
-        "id": 15,
+        "id": 18,
         "label": "Yes",
         "imageUrl": "profiles.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 16,
+        "id": 19,
         "label": "No profiles",
         "imageUrl": "profiles-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 17,
+        "id": 20,
         "label": "Not Sure",
         "imageUrl": "profiles-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -158,22 +179,25 @@
     "subHeading": "For example, will your application need to connect to a third party service such as Google Maps or Xero?",
     "options": [
       {
-        "id": 15,
+        "id": 21,
         "label": "Yes",
         "imageUrl": "api.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 16,
+        "id": 22,
         "label": "No APIs needed",
         "imageUrl": "api-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 17,
+        "id": 23,
         "label": "Not Sure",
         "imageUrl": "api-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -183,22 +207,25 @@
     "subHeading": "Will people upload images, videos or data to your app or software?",
     "options": [
       {
-        "id": 15,
+        "id": 24,
         "label": "Yes",
         "imageUrl": "uploads.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 16,
+        "id": 25,
         "label": "No",
         "imageUrl": "uploads-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 17,
+        "id": 26,
         "label": "Not Sure",
         "imageUrl": "uploads-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -207,28 +234,32 @@
     "heading": "How will you make revenue from your app?",
     "options": [
       {
-        "id": 18,
+        "id": 27,
         "label": "Upfront cost",
         "imageUrl": "money-upfront.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 19,
+        "id": 28,
         "label": "In-app purchases",
         "imageUrl": "money-inapp.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 20,
+        "id": 29,
         "label": "Free",
         "imageUrl": "money-free.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 21,
+        "id": 30,
         "label": "Not sure",
         "imageUrl": "money-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -237,22 +268,25 @@
     "heading": "Will your application need a ratings or review system?",
     "options": [
       {
-        "id": 22,
+        "id": 31,
         "label": "Yes",
         "imageUrl": "reviews.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 23,
+        "id": 32,
         "label": "No",
         "imageUrl": "reviews-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 24,
+        "id": 33,
         "label": "Not Sure",
         "imageUrl": "reviews-notsure.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -261,16 +295,18 @@
     "heading": "How would you like your app to look?",
     "options": [
       {
-        "id": 25,
+        "id": 34,
         "label": "Basic design",
         "imageUrl": "design-stock.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 26,
+        "id": 35,
         "label": "Amazing design",
         "imageUrl": "design-amazing.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   },
@@ -280,22 +316,25 @@
     "subHeading": "Full branding is handy for businesses requiring a complete setup where we look after all angles of design related to your business.",
     "options": [
       {
-        "id": 27,
+        "id": 36,
         "label": "Logo",
         "imageUrl": "branding-logo.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 28,
+        "id": 37,
         "label": "Full branding(documents,colors,fonts,logo) ",
         "imageUrl": "branding-full.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       },
       {
-        "id": 29,
+        "id": 38,
         "label": "None",
         "imageUrl": "branding-none.svg",
-        "tickPosition": "top-left"
+        "tickPosition": "top-left",
+        "day": 5
       }
     ]
   }

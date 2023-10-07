@@ -9,21 +9,24 @@
         "label": "Mobile",
         "imageUrl": "type-iphone.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 1,
         "label": "Web",
         "imageUrl": "type-desktop.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 2,
         "label": "Mobile & Web",
         "imageUrl": ["type-iphone.svg", "type-desktop.svg"],
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -37,21 +40,24 @@
         "label": "Apple IOS",
         "imageUrl": "type-iphone.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 4,
         "label": "Google Android",
         "imageUrl": "type-android.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 5,
         "label": "Both platforms",
         "imageUrl": ["type-iphone.svg", "type-android.svg"],
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -64,49 +70,57 @@
         "id": 6,
         "label": "Uber for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 7,
         "label": "Airbnb for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 8,
         "label": "Tinder for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 9,
         "label": "LinkedIn for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 10,
         "label": "Instagram for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 11,
         "label": "Crowdfunding for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 12,
         "label": "Marketplace for X",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 13,
         "label": "Something else",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -120,28 +134,32 @@
         "label": "Email",
         "imageUrl": "login-email.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 15,
         "label": "Social",
         "imageUrl": "login-social.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 16,
         "label": "No Login",
         "imageUrl": "login-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 17,
         "label": "Not sure",
         "imageUrl": "login-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -155,21 +173,24 @@
         "label": "Yes",
         "imageUrl": "profiles.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 19,
         "label": "No profiles",
         "imageUrl": "profiles-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 20,
         "label": "Not Sure",
         "imageUrl": "profiles-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -183,21 +204,24 @@
         "label": "Yes",
         "imageUrl": "api.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 22,
         "label": "No APIs needed",
         "imageUrl": "api-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 23,
         "label": "Not Sure",
         "imageUrl": "api-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -211,21 +235,24 @@
         "label": "Yes",
         "imageUrl": "uploads.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 25,
         "label": "No",
         "imageUrl": "uploads-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 26,
         "label": "Not Sure",
         "imageUrl": "uploads-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -238,28 +265,32 @@
         "label": "Upfront cost",
         "imageUrl": "money-upfront.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 28,
         "label": "In-app purchases",
         "imageUrl": "money-inapp.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 29,
         "label": "Free",
         "imageUrl": "money-free.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 30,
         "label": "Not sure",
         "imageUrl": "money-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -272,21 +303,24 @@
         "label": "Yes",
         "imageUrl": "reviews.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 32,
         "label": "No",
         "imageUrl": "reviews-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 33,
         "label": "Not Sure",
         "imageUrl": "reviews-notsure.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -299,14 +333,16 @@
         "label": "Basic design",
         "imageUrl": "design-stock.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 35,
         "label": "Amazing design",
         "imageUrl": "design-amazing.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   },
@@ -320,21 +356,24 @@
         "label": "Logo",
         "imageUrl": "branding-logo.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 37,
         "label": "Full branding(documents,colors,fonts,logo) ",
         "imageUrl": "branding-full.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       },
       {
         "id": 38,
         "label": "None",
         "imageUrl": "branding-none.svg",
         "tickPosition": "top-left",
-        "day": 5
+        "day": 5,
+        "price":100
       }
     ]
   }

@@ -1,5 +1,6 @@
 {
   "Step No 1": {
+    "percentageVale":9.09,
     "heading": "What type of prototype or MVP are you building?",
     "subHeading": "Is it for mobile, the web, or both?",
     "options": [
@@ -27,6 +28,7 @@
     ]
   },
   "Step No 2": {
+    "percentageVale":9.09,
     "heading": "Which platforms would you like your Prototype to run on?",
     "subHeading": "Apple iOS provides a more lucrative market while Google Android offers a broader market reach.",
     "options": [
@@ -54,6 +56,7 @@
     ]
   },
   "Step No 3": {
+    "percentageVale":9.09,
     "heading": "Will your product be similar to an existing startup?",
     "subHeading": "Please select an option that best describes your new application.",
     "options": [
@@ -108,6 +111,7 @@
     ]
   },
   "Step No 4": {
+    "percentageVale":9.09,
     "heading": "In your ideal application, will people need to log in?",
     "subHeading": "Would they be able to log in using their email and their social media account (e.g., log in with Facebook)? Or is no login necessary?",
     "options": [
@@ -142,143 +146,196 @@
     ]
   },
   "Step No 5": {
-      "heading": "In your ideal application, will people need profiles?",
-      "subHeading": "A profile is space where users can view one another's personal details that the user has made public. Often utilised when building online communities.",
-      "options": [
-          {
-            "id": 18,
-            "label": "Yes",
-            "imageUrl": "profiles.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 19,
-            "label": "No profiles",
-            "imageUrl": "profiles-none.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 20,
-            "label": "Not Sure",
-            "imageUrl": "profiles-notsure.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          }
-        ]
-   },
-   "Step No 6": {
-      "heading": "Will your application need to use an external service?",
-      "subHeading": "For example, will your application need to connect to a third party service such as Google Maps or Xero?",
-      "options": [
-          {
-            "id": 21,
-            "label": "Yes",
-            "imageUrl": "api.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 22,
-            "label": "No APIs needed",
-            "imageUrl": "api-none.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 23,
-            "label": "Not Sure",
-            "imageUrl": "api-notsure.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          }
-        ]
-   },
-   "Step No 7": {
-      "heading": "Will people need to upload things?",
-      "subHeading": "Will people upload images, videos or data to your app or software?",
-      "options": [
-          {
-            "id": 24,
-            "label": "Yes",
-            "imageUrl": "uploads.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 25,
-            "label": "No",
-            "imageUrl": "uploads-none.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 26,
-            "label": "Not Sure",
-            "imageUrl": "uploads-notsure.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          }
-        ]
-   },
-   "Step No 8": {
-      "heading": "How will you make revenue from your app?",
-      "options": [
-          {
-            "id": 27,
-            "label": "Upfront cost",
-            "imageUrl": "money-upfront.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 28,
-            "label": "In-app purchases",
-            "imageUrl": "money-inapp.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 29,
-            "label": "Free",
-            "imageUrl": "money-free.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-              "id": 30,
-              "label": "Not sure",
-              "imageUrl": "money-notsure.svg",
-              "tickPosition": "top-left",
-              "day": 5
-            }
-        ]
-   },
-   "Step No 9": {
-      "heading": "Will your application need a ratings or review system?",
-      "options": [
-          {
-            "id": 31,
-            "label": "Yes",
-            "imageUrl": "reviews.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 32,
-            "label": "No",
-            "imageUrl": "reviews-none.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          },
-          {
-            "id": 33,
-            "label": "Not Sure",
-            "imageUrl": "reviews-notsure.svg",
-            "tickPosition": "top-left",
-            "day": 5
-          }
-        ]
-   }
+    "percentageVale":9.09,
+    "heading": "In your ideal application, will people need profiles?",
+    "subHeading": "A profile is space where users can view one another's personal details that the user has made public. Often utilised when building online communities.",
+    "options": [
+      {
+        "id": 18,
+        "label": "Yes",
+        "imageUrl": "profiles.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 19,
+        "label": "No profiles",
+        "imageUrl": "profiles-none.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 20,
+        "label": "Not Sure",
+        "imageUrl": "profiles-notsure.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 6": {
+    "percentageVale":9.09,
+    "heading": "Will your application need to use an external service?",
+    "subHeading": "For example, will your application need to connect to a third party service such as Google Maps or Xero?",
+    "options": [
+      {
+        "id": 21,
+        "label": "Yes",
+        "imageUrl": "api.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 22,
+        "label": "No APIs needed",
+        "imageUrl": "api-none.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 23,
+        "label": "Not Sure",
+        "imageUrl": "api-notsure.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 7": {
+    "percentageVale":9.09,
+    "heading": "Will people need to upload things?",
+    "subHeading": "Will people upload images, videos or data to your app or software?",
+    "options": [
+      {
+        "id": 24,
+        "label": "Yes",
+        "imageUrl": "uploads.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 25,
+        "label": "No",
+        "imageUrl": "uploads-none.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 26,
+        "label": "Not Sure",
+        "imageUrl": "uploads-notsure.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 8": {
+    "percentageVale":9.09,
+    "heading": "How will you make revenue from your app?",
+    "options": [
+      {
+        "id": 27,
+        "label": "Upfront cost",
+        "imageUrl": "money-upfront.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 28,
+        "label": "In-app purchases",
+        "imageUrl": "money-inapp.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 29,
+        "label": "Free",
+        "imageUrl": "money-free.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 30,
+        "label": "Not sure",
+        "imageUrl": "money-notsure.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 9": {
+    "percentageVale":9.09,
+    "heading": "Will your application need a ratings or review system?",
+    "options": [
+      {
+        "id": 31,
+        "label": "Yes",
+        "imageUrl": "reviews.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 32,
+        "label": "No",
+        "imageUrl": "reviews-none.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 33,
+        "label": "Not Sure",
+        "imageUrl": "reviews-notsure.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 10": {
+    "percentageVale":9.09,
+    "heading": "How would you like your app to look?",
+    "options": [
+      {
+        "id": 34,
+        "label": "Basic design",
+        "imageUrl": "design-stock.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 35,
+        "label": "Amazing design",
+        "imageUrl": "design-amazing.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  },
+  "Step No 11": {
+    "percentageVale":9.09,
+    "heading": "Do you need brand development?",
+    "subHeading": "Full branding is handy for businesses requiring a complete setup where we look after all angles of design related to your business.",
+    "options": [
+      {
+        "id": 36,
+        "label": "Logo",
+        "imageUrl": "branding-logo.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 37,
+        "label": "Full branding(documents,colors,fonts,logo) ",
+        "imageUrl": "branding-full.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      },
+      {
+        "id": 38,
+        "label": "None",
+        "imageUrl": "branding-none.svg",
+        "tickPosition": "top-left",
+        "day": 5
+      }
+    ]
+  }
 }

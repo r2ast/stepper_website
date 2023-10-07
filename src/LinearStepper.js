@@ -27,7 +27,7 @@ const backArrowSVG = (
 );
 
 const useStyles = makeStyles((theme) => {
-  const tickPositionStyles = (position) => {
+  const tickPositionStyles = (tickPosition) => {
     const tickStyles = {
       position: "absolute",
       width: "20px",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => {
       boxShadow: "0 2px 4px rgba(0,0,0,.13)",
     };
 
-    switch (position) {
+    switch (tickPosition) {
       case "top-left":
         return {
           ...tickStyles,
@@ -64,25 +64,25 @@ const useStyles = makeStyles((theme) => {
     },
     btnPrevious: {
       position: "relative",
-    verticalAlign: "top",
-    background: "#1adf80",
-    borderRadius: "84px",
-    padding: "12px 40px 13px",
-    marginTop: "2px",
-    marginRight: "0.8rem",
-    minWidth: "202px",
-    color: "#fff",
-    fontWeight: "700",
-    fontSize: "13.5px",
-    lineHeight: "1.6em",
-    textAlign: "center",
-    textDecoration: "none",
-    textShadow: "0 0 6px rgba(0, 0, 0, 0.08)",
-    boxShadow: "0 11px 20px rgba(40, 18, 197, 0.17)",
-    boxSizing: "border-box",
-    border: "0",
-    cursor: "pointer",
-    overflow: "hidden",
+      verticalAlign: "top",
+      background: "#1adf80",
+      borderRadius: "84px",
+      padding: "12px 40px 13px",
+      marginTop: "2px",
+      marginRight: "0.8rem",
+      minWidth: "202px",
+      color: "#fff",
+      fontWeight: "700",
+      fontSize: "13.5px",
+      lineHeight: "1.6em",
+      textAlign: "center",
+      textDecoration: "none",
+      textShadow: "0 0 6px rgba(0, 0, 0, 0.08)",
+      boxShadow: "0 11px 20px rgba(40, 18, 197, 0.17)",
+      boxSizing: "border-box",
+      border: "0",
+      cursor: "pointer",
+      overflow: "hidden",
     },
 
     paper: {
@@ -91,6 +91,7 @@ const useStyles = makeStyles((theme) => {
       cursor: "pointer",
       transition: "background-color 0.3s ease",
       position: "relative",
+      boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
       "&:hover": {
         backgroundColor: "#e8ecff",
         "& $tick": {
@@ -138,7 +139,26 @@ const useStyles = makeStyles((theme) => {
     },
     tick: {
       ...tickPositionStyles("top-right"),
+      position: "absolute", // Add this to make pseudo-elements relative to the tick
+      "&::before, &::after": {
+        content: "''",
+        position: "absolute",
+        width: "10px", // Adjust the width as needed
+        height: "2px", // Adjust the height as needed
+        background: "#fff", // Adjust the background color as needed
+      },
+      "&::before": {
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%) rotate(45deg)", // Adjust the rotation as needed
+      },
+      "&::after": {
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%) rotate(-45deg)", // Adjust the rotation as needed
+      },
     },
+
     heading: {
       fontSize: "24px", // can adjust the font size of heading
       fontWeight: "bold",
@@ -184,7 +204,6 @@ const useStyles = makeStyles((theme) => {
         transitionDelay: "0.25s",
       },
     },
-    
   };
 });
 
@@ -243,28 +262,32 @@ const LinearStepper = ({ setPercentageValue }) => {
     setActiveStep(activeStep + 1);
   };
 
-  const handleBoxClick = (label) => {
+  const handleBoxClick = (label, tickPosition) => {
     if (selectedItems.includes(label)) {
       setSelectedItems(selectedItems.filter((item) => item !== label));
     } else {
       setSelectedItems([...selectedItems, label]);
     }
+    collectSelectedItems({ label, tickPosition });
   };
 
   const collectSelectedItems = (selectedItem) => {
     // Check if the item is already in the selectedItemsArray
-    const isSelected = selectedItemsArray.some((item) => item.label === selectedItem.label);
-  
+    const isSelected = selectedItemsArray.some(
+      (item) => item.label === selectedItem.label
+    );
+
     if (isSelected) {
       // If the item is already selected, remove it from the array
-      setSelectedItemsArray(selectedItemsArray.filter((item) => item.label !== selectedItem.label));
+      setSelectedItemsArray(
+        selectedItemsArray.filter((item) => item.label !== selectedItem.label)
+      );
     } else {
       // If the item is not selected, add it to the array
       setSelectedItemsArray([...selectedItemsArray, selectedItem]);
     }
   };
-  
-  console.log('selectedItemsArray ::', selectedItemsArray);
+  console.log("selectedItemsArray ::", selectedItemsArray);
 
   return (
     <div>
@@ -280,29 +303,35 @@ const LinearStepper = ({ setPercentageValue }) => {
           const stepData = jsonData[step];
           return (
             <Step key={index}>
-              <StepLabel>
-                {stepData.heading && (
-                  <Typography variant="h1" className={classes.heading}>
-                    {stepData.heading}
-                  </Typography>
-                )}
-                {stepData.subHeading && (
-                  <Typography variant="h2" className={classes.subHeading}>
-                    {stepData.subHeading}
-                  </Typography>
-                )}
-              </StepLabel>
-
-              {({ accomplished, transitionState, index }) => (
-                <div
-                  style={transitionStyles[transitionState]}
-                  className={`customStep ${
-                    accomplished ? "accomplished" : ""
-                  } ${index === activeStep ? "t-middle" : ""}`}
-                >
-                  {index}
-                </div>
-              )}
+              {/* StepLabel is now inside the Grid */}
+              <Grid container alignItems="center">
+                <Grid item>
+                  <StepLabel>
+                    {stepData.heading && (
+                      <Typography variant="h1" className={classes.heading}>
+                        {stepData.heading}
+                      </Typography>
+                    )}
+                    {stepData.subHeading && (
+                      <Typography variant="h2" className={classes.subHeading}>
+                        {stepData.subHeading}
+                      </Typography>
+                    )}
+                  </StepLabel>
+                </Grid>
+                <Grid item>
+                  {({ accomplished, transitionState, index }) => (
+                    <div
+                      style={transitionStyles[transitionState]}
+                      className={`customStep ${
+                        accomplished ? "accomplished" : ""
+                      } ${index === activeStep ? "t-middle" : ""}`}
+                    >
+                      {index}
+                    </div>
+                  )}
+                </Grid>
+              </Grid>
             </Step>
           );
         })}
